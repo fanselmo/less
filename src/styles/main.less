@@ -1,0 +1,100 @@
+@import "variables.less";
+@import "mapas.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+body {
+  background-color: #colors[backgroundColor];
+
+  h4 {
+    color: @textColor;
+  }
+
+    a {
+        color: @linksColor;
+    }
+
+    a:hover {
+        color: @textColor;
+    }
+    
+}
+
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media @breakpointMobile {
+    max-width: 70%;
+  }
+  @media @breakpointTablet {
+    max-width: 80%;
+  }
+
+  .profile-avatar {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid @textColor;
+    &:hover {
+      border: 5px solid 
+      #colors[hoverColor];
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  .profile-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #colors[textColor];
+    font-weight: bolder;
+  }
+
+  .profile-description {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .my-name {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: 'Pacifico', sans-serif;
+      &:hover {
+        color: #colors[hoverColor];
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+  }
+
+  .social {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #colors[textColor];
+
+    .social-links {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 20px;
+      color: @textColor;
+
+      li a {
+        text-decoration: none;
+
+        &:hover {
+          color: #colors[hoverColor];
+          transition: all 0.2s ease-in-out;
+        }
+        
+      }
+
+    }
+  }
+  
+}
+
+
